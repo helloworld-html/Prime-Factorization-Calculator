@@ -28,17 +28,31 @@ https://helloworld-html.github.io/Prime-Factorization-Calculator/
 ## Node.js Interface
 https://www.npmjs.com/package/prime-factorization
 
-You can also import the calculator in your code with Node.js and access it with a function:
+After you installed the package, place this in your code:
 ```js
-const module = require("prime-factorization");
- 
-let myVariable = module.factorize(19386);
-console.log(myVariable); //returns 2 * 3 * 3 * 3 * 359
+const module = require('prime-factorization');
 ```
-You can also modify the divisor (default is 2) as the following,
+
+- **Factorize a number**
+
+There are different ways to factorize (19386 as an example):
 
 ```js
-module.factorize(19386, 4); //returns 6 * 9 * 359
+const firstMethod = module.Factorize(19386, 'asArray'); //result in array
+const secondMethod = module.Factorize(19386, 'asArrayExp'); //exponentiates same numbers
+const thirdMethod = module.Factorize(19386, 'asObject'); //shows all calculations
+
+console.log(firstMethod) //returns [2, 3, 3, 3, 359]
+console.log(secondMethod) //returns [2, 27, 359]
+console.log(thirdMethod) //returns { 'Calculation 0': '1100 ÷ 2', 'Calculation 1': '550 ÷ 2', 'Calculation 2': '275 ÷ 5', 'Calculation 3': '55 ÷ 5', 'Calculation 4': '11 ÷ 11' }
+```
+
+
+- **Check if number is prime**
+
+```js
+const myVar = module.IsPrime(111) //will return either true or false
+console.log(myVar) //returns true
 ```
 
 ***Please report any bugs or errors, thanks for your contribution!***
