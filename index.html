@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Prime Factorization Calculator </title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="A calculator that computes prime factorization of a positive integer"/>
+    <meta name="theme-color" content="#1a1a1a"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/png" href="icons/favicon.png"/>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+
+  <body>
+    <main>
+      <h1> Prime Factor Decomposition </h1>
+      <input type="text" placeholder="positive integer" autofocus>
+      <button onclick="ValidateInput()"> Submit </button>
+      <h2></h2>
+      <p id="result"></p>
+      <i id="time"></i>
+      <div style="display:none">
+        <a id="toogle"> Toogle view </a>
+        <a id="link1" onclick="main.style.display='none';section.style.display='block';Storage()"> Browse your history &#8594; </a>
+      </div>
+    </main>
+
+    <section style="display:none">
+      <h1 style="animation-duration:1.5s;animation-name:transition_h1"> Your History </h1>
+      <h3></h3>
+      <div>
+        <a id="link2" onclick="main.style.display='block';section.style.display='none'"> Go back to calculator &#x21A9; </a>
+        <a id="clear" onclick="localStorage.clear();alert('LOCAL STORAGE IS CLEARED');link2.click();Storage()"> Clear your history </a>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <noscript style="display:block"> Please activate JavaScript otherwise calculator cannot work </noscript>
+
+  </body>
+</html>

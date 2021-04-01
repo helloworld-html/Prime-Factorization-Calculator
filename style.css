@@ -1,0 +1,177 @@
+* {
+  font-family: 'B612', sans-serif;
+  text-decoration: none;
+  outline: none;
+  user-select: none;
+}
+
+body {
+ background-color: #1a1a1a;
+ animation: fade 3s;
+ width: 100%;
+ color: white;
+ overflow-x: hidden;
+ margin: 0px;
+}
+
+@font-face {
+ font-family: 'B612';
+ font-display: swap;
+ src: url(https://fonts.gstatic.com/s/b612/v5/3JnySDDxiSz36j6yGQ.woff2) format('woff2');
+ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+::-webkit-scrollbar { width: 10px }
+::-webkit-scrollbar-track { background: #1a1a1a }
+::-webkit-scrollbar-thumb { background: #888; border-radius: 7px }
+::-webkit-scrollbar-thumb:hover { background: white }
+
+h1 {
+ font-weight: normal;
+ margin-top: 50px;
+ font-size: 250%;
+ text-align: center;
+}
+
+input {
+ margin: 100px auto auto;
+ text-align: center;
+ border: none;
+ display: block;
+ padding: 15px 30px 15px 30px;
+ font-size: 20px;
+ border-radius: 10px;
+ width: 200px;
+}
+
+input:hover { filter: drop-shadow(0px 0px 10px white) }
+
+input::placeholder { font-style: italic; font-size: 18px }
+
+button {
+ cursor: pointer;
+ border: none;
+ background-color: white;
+ margin: 20px auto auto;
+ display: block;
+ padding: 8px 15px 8px 15px;
+ border-radius: 5px;
+ font-size: 13px;
+}
+
+button:hover { filter: drop-shadow(0px 0px 10px white) }
+
+h2 {
+ text-align: center;
+ font-style: italic;
+ font-weight: lighter;
+ margin-top: 35px;
+}
+
+#result, noscript {
+ text-align: center;
+ font-size: 25px;
+ padding-bottom: 20px;
+}
+
+#time {
+ margin: 0px 20px 0px 20px;
+ text-align: center;
+ display: block;
+ font-size: 17px;
+ color: #ff4dff;
+ padding-bottom: 50px;
+}
+
+#toogle, #link1, #link2, #clear {
+ position: fixed;
+ cursor: pointer;
+ bottom: 3px;
+ font-size: 10px;
+}
+
+#toogle, #clear { left: 4px }
+
+#link1, #link2 { right: 4px }
+
+div > main { display: none }
+
+#toogle:hover, #link1:hover, #link2:hover, #clear:hover { color: #4dc3ff }
+
+section > h3 {
+ font-size: 20px;
+ font-weight: normal;
+ color: #ff8f66;
+ padding: 40px 80px 40px 80px;
+ animation-duration: 1.5s;
+ animation-name: transition_h3;
+}
+
+@media screen and (max-width: 600px) {
+ h1 { margin-top: 50px; font-size: 200% }
+ input {
+  margin-top: 75px;
+  padding: 14px 25px 14px 25px;
+  font-size: 15px;
+  border-radius: 7px;
+  width: 150px;
+ }
+ input::placeholder { font-style: italic; font-size: 14px }
+ button {
+  padding: 7px 13px 7px 13px;
+  border-radius: 5px;
+  font-size: 10px;
+ }
+ h2 {
+  margin-top: 35px;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+ }
+ #result { font-size: 18px }
+ #time { font-size: 14px }
+ section > h3 {
+  font-size: 15px;
+  padding: 40px 30px 40px 30px;
+ }
+}
+
+@media screen and (min-width: 1500px) {
+ h1 { margin-top: 60px; font-size: 330% }
+ input {
+  margin-top: 130px;
+  padding: 19px 35px 19px 35px;
+  font-size: 25px;
+  border-radius: 12px;
+  width: 250px;
+ }
+ input::placeholder { font-size: 20px }
+ button {
+  margin-top: 35px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+ }
+ h2 { margin-top: 60px; font-size: 35px }
+ #result { font-size: 30px }
+ #time { font-size: 23px }
+ section > h3 {
+  font-size: 25px;
+  padding: 50px 100px 50px 100px;
+ }
+}
+
+@keyframes fade {
+ from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+@keyframes transition_h1 {
+ from { transform: scale(0) }
+ to { transform: scale(1) }
+}
+
+@keyframes transition_h3 {
+ from { margin-left: 100% }
+ to { margin-left: 0% }
+}
